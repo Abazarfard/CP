@@ -1,7 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
 
-export default {
+
+const config = {
   preprocess: sveltePreprocess(),
   kit: {
     adapter: adapter({
@@ -14,18 +15,6 @@ export default {
     paths: {
       base: process.env.NODE_ENV === 'production' ? '/https://github.com/Abazarfard/CP.git' : ''
     }
-  }
-};
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
-		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
-	}
 };
 
 export default config;
