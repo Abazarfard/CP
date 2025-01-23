@@ -12,7 +12,7 @@ export default {
       strict: true
     }),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/https://abazarfard.github.io/CP' : ''
+      base: process.env.NODE_ENV === 'production' ? '/https://github.com/Abazarfard/CP.git' : ''
     }
   }
 };
